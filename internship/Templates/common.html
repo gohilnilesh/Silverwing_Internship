@@ -68,11 +68,11 @@
                                         <li><a href="my-account.html"><i class="fa fa-user"></i>My account</a></li>
                                         <li><a href="#"><i class="fa fa-shopping-cart"></i>My cart</a></li>
                                         <li><a href="wishlist.html"><i class="fa fa-heart"></i>My wishlist</a></li>
-                                        <li><a href="#"><i class="fa fa-lock"></i>Log out</a></li>
-                                        <li><a href="#"><i class="fa fa-lock"></i>Change Password</a></li>
+                                        <li><a href="{% url 'account_logout' %}"><i class="fa fa-lock"></i>Log out</a></li>
+                                        <li><a href="{% url 'account_change_password' %}"><i class="fa fa-lock"></i>Change Password</a></li>
                                     {% else %}
-									    <li><a href="#"><i class="fa fa-lock"></i>Login</a></li>
-                                        <li><a href="#"><i class="fa fa-lock"></i>Signup</a></li>
+									    <li><a href="{% url 'account_login' %}"><i class="fa fa-lock"></i>Login</a></li>
+                                        <li><a href="{% url 'account_signup' %}"><i class="fa fa-lock"></i>Signup</a></li>
                                     {% endif %}
 								</ul>
 							</div>
@@ -93,7 +93,7 @@
 							    <div class="mainmenu clearfix hidden-sm hidden-xs">
                                     <nav>
                                         <ul>
-                                            <li><a href="#">Home</a>
+                                            <li><a href="{% url 'MyApp:home' %}">Home</a>
 
                                             </li>
                                             <li><a href="shop.html">Shop</a>
